@@ -1,0 +1,18 @@
+.my-bookings {
+  padding: 2rem;
+}
+.booking-list {
+  list-style: none;
+  padding: 0;
+}
+.booking-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+}
+.error {
+  color: red;
+  text-align: center;
+}

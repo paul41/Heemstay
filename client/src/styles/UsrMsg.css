@@ -1,0 +1,52 @@
+.admin-messages-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.admin-messages-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.messages-table th,
+.messages-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.messages-table th {
+  background-color: #f0f2ff;
+  color: #283593;
+  font-weight: 600;
+}
+
+.messages-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.messages-table tr:hover {
+  background-color: #f5f7ff;
+}
+
+.loading-text,
+.error-text,
+.no-messages {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+}

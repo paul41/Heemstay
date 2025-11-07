@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  title: Homestay Booking API
+  version: 1.0.0
+  description: API for managing homestays, bookings, and users
+
+servers:
+  - url: http://localhost:5000/api
+
+paths:
+  /rooms:
+    get:
+      summary: Get all rooms
+      parameters:
+        - name: featured
+          in: query
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: List of rooms
+
+  /rooms/{id}:
+    get:
+      summary: Get room by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Room details
+
+  /bookings:
+    post:
+      summary: Create a booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roomId:
+                  type: string
+                checkInDate:
+                  type: string
+                  format: date
+                checkOutDate:
+                  type: string
+                  format: date
+      responses:
+        '201':
+          description: Booking created
+
+  /bookings/me:
+    get:
+      summary: Get bookings for logged-in user
+      responses:
+        '200':
+          description: List of user bookings
+
+  /auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Auth token
+
+  /auth/register:
+    post:
+      summary: Register new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: User created
