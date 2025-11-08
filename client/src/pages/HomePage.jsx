@@ -58,9 +58,9 @@ const HomePage = () => {
           A perfect serene place with Majestic views of Himalayas in the Eastern font and green layers of mountains.
           The Homestay is situated in the lap of 'Damsang' Valley it has it's own historical tale.
           Here we serve you with authentic local cuisines and provide you with a homely experience.
-          <Link to="/about">
+          {/* <Link to="/about">
             Learn More About Us
-          </Link>
+          </Link> */}
         </p>
       </section>
       {/* Food with Stay */}
