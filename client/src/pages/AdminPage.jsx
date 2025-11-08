@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/AdminPage.css";
 
-const baseURL = process.env.REACT_APP_DEV_LOCAL;
+const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL;
 
 const Admin = () => {
     const [message, setMessage] = useState("");

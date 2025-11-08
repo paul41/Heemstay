@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate,Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/Register.css";
-const baseURL = process.env.REACT_APP_DEV_LOCAL
+const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL
 
 const Register = () => {
   const navigate = useNavigate();

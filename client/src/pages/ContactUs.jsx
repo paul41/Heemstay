@@ -4,7 +4,7 @@ import axios from "axios";
 
 const ContactUs = () => {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
-    const baseURL = process.env.REACT_APP_DEV_LOCAL;
+    const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL;
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import RoomCard from "../components/RoomCard";
 import "../styles/RoomList.css";
-const baseURL = process.env.REACT_APP_DEV_LOCAL
+const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL
 
 const RoomList = () => {
   const [rooms, setRooms] = useState([]);

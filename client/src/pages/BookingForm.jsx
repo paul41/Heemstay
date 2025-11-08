@@ -9,7 +9,7 @@ const BookingForm = () => {
   const { id } = useParams(); // room ID from URL
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  const baseURL = process.env.REACT_APP_DEV_LOCAL;
+  const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL;
   const [rooms, setRooms] = useState([]);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [checkInDate, setCheckInDate] = useState(null);

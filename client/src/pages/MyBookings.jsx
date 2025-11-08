@@ -7,7 +7,7 @@ const MyBookings = () => {
   const { user } = useContext(AuthContext);
   const [bookings, setBookings] = useState([]);
   const [error, setError] = useState("");
-  const baseURL = process.env.REACT_APP_DEV_LOCAL;
+  const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL;
 
   useEffect(() => {
     const fetchBookings = async () => {

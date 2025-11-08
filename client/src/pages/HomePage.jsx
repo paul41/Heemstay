@@ -4,49 +4,11 @@ import axios from "axios";
 import RoomCard from "../components/RoomCard";
 import "../styles/Home.css";
 
-const baseURL = process.env.REACT_APP_DEV_LOCAL
+const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL
 
 const HomePage = () => {
   const [featuredRooms, setFeaturedRooms] = useState([]);
-  // const resp = [
-  //   {
-  //     _id: "653f1a2b9c1e4f0012345678",
-  //     title: "Serene Hillside Cottage",
-  //     pricePerNight: 2200,
-  //     address: "Manali, Himachal Pradesh",
-  //     description: "A peaceful retreat with mountain views, perfect for couples and solo travelers.",
-  //     images: [
-  //       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/67/8e/2b/hoysala-homestays.jpg?w=700&h=-1&s=1"
-  //     ],
-  //     amenities: ["Food", "WiFi", "Hot Water", "Private Balcony", "Mountain View"],
-  //     featured: true
-  //   },
-  //   {
-  //     _id: "653f1a2b9c1e4f0012345679",
-  //     title: "Rustic Log Hut",
-  //     pricePerNight: 1800,
-  //     address: "Kasol, Himachal Pradesh",
-  //     description: "A cozy wooden hut nestled in the pine forests of Parvati Valley.",
-  //     images: [
-  //       "https://cdn.pixabay.com/photo/2014/05/16/04/13/log-huts-345360_640.jpg"
-  //     ],
-  //     amenities: ["Food", "WiFi", "Fireplace", "Garden Access", "Pet Friendly"],
-  //     featured: true
-  //   },
-  //   {
-  //     _id: "653f1a2b9c1e4f0012345680",
-  //     title: "Beachside Bamboo Bungalow",
-  //     pricePerNight: 2500,
-  //     address: "Palolem, Goa",
-  //     description: "Wake up to ocean waves in this eco-friendly bamboo stay just steps from the beach.",
-  //     images: [
-  //       "https://a0.muscache.com/im/pictures/3e42ffe0-6c61-433e-bad9-8812a8dd2127.jpg?im_w=720"
-  //     ],
-  //     amenities: ["Food", "WiFi", "Beach Access", "Hammock", "Breakfast Included"],
-  //     featured: true
-  //   }
-  // ];
-
+  
   useEffect(() => {
     const fetchRooms = async () => {
       try {

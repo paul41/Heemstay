@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Create Axios instance
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL,
+  //import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api",
   withCredentials: true, // optional: if using cookies
 });
 

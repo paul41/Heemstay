@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 export const AuthContext = createContext();
-const baseURL = process.env.REACT_APP_DEV_LOCAL
+const baseURL = process.env.REACT_APP_API_URL || process.env.REACT_APP_DEV_LOCAL
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
